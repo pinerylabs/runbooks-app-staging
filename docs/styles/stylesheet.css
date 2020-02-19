@@ -45,6 +45,8 @@ body {
   body #app {
     height: 100%;
     width: 100%; }
-    body #app > div {
+    body #app .page {
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
