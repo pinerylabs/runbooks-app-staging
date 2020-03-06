@@ -7,6 +7,7 @@ big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong,
 dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
 mark, audio, video {
+  box-sizing: border-box;
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
@@ -36,17 +37,124 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.placeholder {
+  color: #C8C8C8; }
+
+form {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column; }
+  form input, form textarea {
+    border: 1px solid #C8C8C8; }
+  form textarea {
+    height: 64px; }
+  form .row {
+    /* self layout */
+    flex: 1 1 100%;
+    margin-top: 4px;
+    /* child layout */
+    display: flex;
+    flex-flow: column nowrap; }
+    form .row .entry {
+      display: flex;
+      flex-flow: row nowrap; }
+    form .row p.error {
+      display: none; }
+    form .row:first-child {
+      margin-top: 0; }
+  form .row.buttons {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+  form .row.error {
+    margin-bottom: 16px; }
+    form .row.error input, form .row.error textarea {
+      border: red 1px solid; }
+    form .row.error p {
+      /* self position */
+      display: block;
+      /* self display */
+      color: red;
+      font-size: 14px;
+      text-align: center; }
+  form .row.text-field label {
+    flex: 0 0 25%;
+    display: block; }
+  form .row.text-field input {
+    flex: 1 1 75%;
+    display: block; }
+  form .row.text-field.error p {
+    flex: 1 1 75%;
+    margin-left: 2px 25% 4px 0; }
+  form .row.text-area .entry {
+    flex-flow: column nowrap; }
+
+a {
+  color: #1333F6; }
+  a:active {
+    color: #0A197A; }
+  a:visited {
+    color: #8A9BFA; }
+
 body {
+  /* self layout */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  /* self decoration */
+  font-family: serif;
+  font-size: 16.8px; }
   body #app {
     height: 100%;
     width: 100%; }
-    body #app .page {
+    body #app > * {
       height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column; }
+      width: 100%; }
+      body #app > * .c-generic-page {
+        height: 100%;
+        width: 100%; }
+
+button {
+  background: #F5FAF4;
+  border: 1px solid #1B4F0A;
+  border-radius: 8px;
+  color: #1B4F0A;
+  font-size: 16.8px;
+  padding: 4px 32px; }
+  button.action {
+    background: #359C0F;
+    border: 2px solid #1B4F0A;
+    color: #F5FAF4;
+    font-weight: bold; }
+  button + button {
+    margin-left: 16px; }
+  button.little {
+    font-size: 14px;
+    padding: 2px 16px; }
+
+h1 {
+  font-family: sans-serif;
+  font-size: 29.0304px; }
+
+h2 {
+  font-family: sans-serif;
+  font-size: 24.192px; }
+
+h3 {
+  font-family: sans-serif;
+  font-size: 20.16px; }
+
+input, textarea {
+  font-family: sans-serif;
+  font-size: 16.8px; }
+
+label {
+  font-family: sans-serif;
+  font-size: 16.8px; }
+
+li {
+  font-family: serif;
+  font-size: 16.8px; }
