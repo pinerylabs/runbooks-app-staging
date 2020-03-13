@@ -126,19 +126,26 @@ body {
         width: 100%; }
 
 button {
+  /* self decoration */
   background: #F5FAF4;
-  border: 1px solid #1B4F0A;
   border-radius: 8px;
-  color: #1B4F0A;
+  border: 1px solid #1B4F0A;
+  color: #359C0F;
+  cursor: pointer;
   font-size: 16.8px;
+  /* child layout */
   padding: 4px 32px; }
-  button.action {
-    background: #359C0F;
-    border: 2px solid #1B4F0A;
-    color: #F5FAF4;
-    font-weight: bold; }
   button + button {
     margin-left: 16px; }
+  button.action {
+    background: #359C0F;
+    border: 1px solid #1B4F0A;
+    color: #F5FAF4;
+    font-weight: bold; }
+  button.destructive {
+    background: #FDF4F4;
+    border: 1px solid #691610;
+    color: #D22D20; }
   button.little {
     font-size: 14px;
     padding: 2px 16px; }
@@ -166,3 +173,8 @@ label {
 li {
   font-family: serif;
   font-size: 16.8px; }
+
+pre {
+  font-family: monospace;
+  font-size: 14px;
+  overflow-x: auto; }
