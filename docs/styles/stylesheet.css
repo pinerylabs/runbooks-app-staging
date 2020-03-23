@@ -8,12 +8,14 @@ dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
 mark, audio, video {
   box-sizing: border-box;
+  cursor: default;
   flex: 0 0 auto;
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
+  user-select: none;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -99,7 +101,8 @@ form {
     flex-flow: column nowrap; }
 
 a {
-  color: #1333F6; }
+  color: #1333F6;
+  cursor: pointer; }
   a:active {
     color: #0A197A; }
   a:visited {
