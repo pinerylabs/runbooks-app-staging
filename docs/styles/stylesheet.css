@@ -39,78 +39,146 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/avenir-bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Hoefler Text";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/hoefler-text.woff") format("woff"); }
+
+@font-face {
+  font-family: "Hoefler Text";
+  font-style: italic;
+  font-weight: normal;
+  src: url("/fonts/hoefler-text-italic.woff") format("woff"); }
+
+@font-face {
+  font-family: "Menlo";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/menlo.woff") format("woff"); }
+
+.button-row {
+  /* self layout */
+  margin-top: 32px;
+  /* child layout */
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end; }
+  .button-row button + button {
+    margin-left: 16px; }
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 25%; }
+
+.fadable {
+  transition: opacity 0.25s;
+  opacity: 1; }
+  .fadable.faded {
+    opacity: 0;
+    pointer-events: none; }
+
 .h2 {
-  font-family: sans-serif;
-  font-size: 24.192px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 24pt; }
+
+.label-row label {
+  display: inline-block;
+  min-width: 96px; }
+
+.label-row + .label-row {
+  margin-top: 16px; }
 
 .missing-component {
-  background: #E9E9E9;
-  border: 1px dashed #929292;
+  background: #FAFBFC;
+  border: 1px dashed #BB5151;
   font-family: monospace;
-  color: #494949;
+  color: #DAE2ED;
   text-align: center;
-  padding: 16px; }
+  padding: 48px; }
 
 .placeholder {
-  color: #C8C8C8; }
+  font-family: "Avenir", sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  color: #DAE2ED; }
 
-form {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column; }
-  form input, form textarea {
-    border: 1px solid #C8C8C8; }
-  form textarea {
-    height: 64px; }
-  form .row {
+.scroll-buffer {
+  height: 48px; }
+
+form input {
+  /* decoration */
+  font-family: "Menlo", monospace;
+  font-size: 12pt;
+  border: 1px solid #2E5FA5;
+  color: #2E5FA5;
+  /* child layout */
+  padding: 4px 8px; }
+
+form table {
+  width: 100%; }
+
+form textarea {
+  /* self layout */
+  height: 96px;
+  /* decoration */
+  font-family: "Menlo", monospace;
+  font-size: 12pt;
+  border: 1px solid #2E5FA5;
+  color: #2E5FA5;
+  /* child layout */
+  padding: 4px 8px; }
+
+form tr td {
+  /* self layout */
+  padding-bottom: 16px; }
+  form tr td label, form tr td input, form tr td textarea {
+    width: calc(100% - 16px); }
+  form tr td p.error {
     /* self layout */
-    flex: 1 1 100%;
-    margin-top: 4px;
+    display: none;
+    /* decoration */
+    color: #BB5151;
+    font-family: "Avenir", sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
     /* child layout */
-    display: flex;
-    flex-flow: column nowrap; }
-    form .row .entry {
-      display: flex;
-      flex-flow: row nowrap; }
-    form .row p.error {
-      display: none; }
-    form .row:first-child {
-      margin-top: 0; }
-  form .row.buttons {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; }
-  form .row.error {
-    margin-bottom: 16px; }
-    form .row.error input, form .row.error textarea {
-      border: red 1px solid; }
-    form .row.error p {
-      /* self position */
-      display: block;
-      /* self display */
-      color: red;
-      font-size: 14px;
-      text-align: center; }
-  form .row.text-field label {
-    flex: 0 0 25%;
-    display: block; }
-  form .row.text-field input {
-    flex: 1 1 75%;
-    display: block; }
-  form .row.text-field.error p {
-    flex: 1 1 75%;
-    margin-left: 2px 25% 4px 0; }
-  form .row.text-area .entry {
-    flex-flow: column nowrap; }
+    padding-top: 4px; }
+
+form tr:last-child td {
+  padding-bottom: 0; }
+
+form tr.buttons td {
+  padding-top: 16px;
+  text-align: right; }
+
+form tr.error input, form tr.error textarea {
+  color: #BB5151;
+  border-color: #BB5151; }
+
+form tr.error p.error {
+  display: block; }
+
+form tr.error td {
+  padding-top: 16px; }
+
+form tr.with-jump td {
+  padding-top: 48px; }
 
 a {
-  color: #1333F6;
+  font-family: "Avenir", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #2E5FA5;
   cursor: pointer; }
   a:active {
-    color: #0A197A; }
-  a:visited {
-    color: #8A9BFA; }
+    color: #122540; }
 
 body {
   /* self layout */
@@ -119,9 +187,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  /* self decoration */
-  font-family: serif;
-  font-size: 16.8px; }
+  /* decoration */
+  font-family: "Hoefler Text", serif;
+  font-size: 15pt;
+  background: #FAFBFC;
+  color: #122540; }
   body #app {
     height: 100%;
     width: 100%; }
@@ -133,55 +203,122 @@ body {
         width: 100%; }
 
 button {
+  /* self layout */
+  height: 32px;
+  min-width: 96px;
   /* self decoration */
-  background: #F5FAF4;
-  border-radius: 8px;
-  border: 1px solid #1B4F0A;
-  color: #359C0F;
+  font-family: "Avenir", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  background: #FAFBFC;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.125);
+  border-radius: 16px;
+  border: 2px solid #2E5FA5;
+  color: #2E5FA5;
   cursor: pointer;
-  font-size: 16.8px;
   /* child layout */
-  padding: 4px 32px; }
-  button + button {
-    margin-left: 16px; }
+  padding: 4px 48px; }
+  button:active {
+    box-shadow: none; }
+  button:hover {
+    background: #eaeef2; }
   button.action {
-    background: #359C0F;
-    border: 1px solid #1B4F0A;
-    color: #F5FAF4;
-    font-weight: bold; }
+    background: #2E5FA5;
+    border-width: 0;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    color: #FAFBFC; }
+    button.action:hover {
+      background: #285491; }
   button.destructive {
-    background: #FDF4F4;
-    border: 1px solid #691610;
-    color: #D22D20; }
+    border-color: #BB5151;
+    color: #BB5151; }
+    button.destructive:hover {
+      border: none;
+      background: #BB5151;
+      color: #FAFBFC; }
   button.little {
-    font-size: 14px;
-    padding: 2px 16px; }
+    /* self layout */
+    height: 24px;
+    min-width: 96px;
+    /* decoration */
+    font-family: "Avenir", sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    border-radius: 12px;
+    border-width: 1px;
+    /* child layout */
+    padding: 2px 4px; }
 
 h1 {
-  font-family: sans-serif;
-  font-size: 29.0304px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 32pt; }
 
 h2 {
-  font-family: sans-serif;
-  font-size: 24.192px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 24pt; }
 
 h3 {
-  font-family: sans-serif;
-  font-size: 20.16px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 18pt; }
 
-input, textarea {
-  font-family: sans-serif;
-  font-size: 16.8px; }
+i {
+  font-style: italic; }
+
+input {
+  /* decoration */
+  font-family: "Menlo", monospace;
+  font-size: 12pt;
+  background: #FFFFFF;
+  border: 1px solid #DAE2ED;
+  color: #122540;
+  /* child layout */
+  padding: 4px; }
+  input.display-only {
+    /* decoration */
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    cursor: default;
+    /* child layout */
+    padding-left: 0; }
+    input.display-only:focus {
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      color: #122540; }
+  input:focus {
+    border-color: #2E5FA5;
+    color: #2E5FA5; }
 
 label {
-  font-family: sans-serif;
-  font-size: 16.8px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 15pt; }
 
 li {
-  font-family: serif;
-  font-size: 16.8px; }
+  font-family: "Hoefler Text", serif;
+  font-size: 13pt; }
+
+p {
+  line-height: 1.25em; }
+  p + p {
+    margin-top: 48px; }
 
 pre {
-  font-family: monospace;
-  font-size: 14px;
+  font-family: "Menlo", monospace;
+  font-size: 12pt;
   overflow-x: auto; }
+
+ul {
+  /* self layout */
+  margin: 16px 0 48px 0;
+  /* decoration */
+  font-family: "Hoefler Text", serif;
+  font-size: 13pt;
+  list-style-type: disc;
+  list-style-position: outside; }
+  ul li {
+    margin-left: 48px; }
+  ul.simple {
+    list-style-type: none; }
+    ul.simple li {
+      margin-left: 0; }
+      ul.simple li + li {
+        margin-top: 4px; }
