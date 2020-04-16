@@ -87,7 +87,9 @@ table {
 .h2 {
   font-family: "Hoefler Text", serif;
   font-size: 24pt; }
-
+  @media (max-width: 568px) {
+    .h2 {
+      font-size: 16pt; } }
 .label-row label {
   display: inline-block;
   min-width: 96px; }
@@ -192,6 +194,9 @@ body {
   font-size: 15pt;
   background: #FAFBFC;
   color: #122540; }
+  @media (max-width: 568px) {
+    body {
+      font-size: 13pt; } }
   body #app {
     height: 100%;
     width: 100%; }
@@ -252,15 +257,21 @@ button {
 h1 {
   font-family: "Hoefler Text", serif;
   font-size: 32pt; }
-
+  @media (max-width: 568px) {
+    h1 {
+      font-size: 24pt; } }
 h2 {
   font-family: "Hoefler Text", serif;
   font-size: 24pt; }
-
+  @media (max-width: 568px) {
+    h2 {
+      font-size: 16pt; } }
 h3 {
   font-family: "Hoefler Text", serif;
   font-size: 18pt; }
-
+  @media (max-width: 568px) {
+    h3 {
+      font-size: 12pt; } }
 i {
   font-style: italic; }
 
@@ -291,7 +302,9 @@ input {
 label {
   font-family: "Hoefler Text", serif;
   font-size: 15pt; }
-
+  @media (max-width: 568px) {
+    label {
+      font-size: 13pt; } }
 li {
   font-family: "Hoefler Text", serif;
   font-size: 13pt; }
