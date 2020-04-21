@@ -305,10 +305,6 @@ label {
   @media (max-width: 568px) {
     label {
       font-size: 13pt; } }
-li {
-  font-family: "Hoefler Text", serif;
-  font-size: 13pt; }
-
 p {
   line-height: 1.25em; }
   p + p {
@@ -323,15 +319,13 @@ ul {
   /* self layout */
   margin: 16px 0 48px 0;
   /* decoration */
-  font-family: "Hoefler Text", serif;
-  font-size: 13pt;
   list-style-type: disc;
   list-style-position: outside; }
   ul li {
     margin-left: 48px; }
+    ul li + li {
+      margin-top: 4px; }
   ul.simple {
     list-style-type: none; }
     ul.simple li {
       margin-left: 0; }
-      ul.simple li + li {
-        margin-top: 4px; }
