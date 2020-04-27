@@ -238,7 +238,6 @@ button {
     border-color: #BB5151;
     color: #BB5151; }
     button.destructive:hover {
-      border: none;
       background: #BB5151;
       color: #FAFBFC; }
   button.little {
