@@ -6,7 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
 dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time,
-mark, audio, video {
+mark, audio, video, input {
   box-sizing: border-box;
   cursor: default;
   flex: 0 0 auto;
@@ -23,7 +23,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1em; }
 
 ol, ul {
   list-style: none; }
@@ -114,64 +114,57 @@ table {
 .scroll-buffer {
   height: 48px; }
 
-form input {
-  /* decoration */
-  font-family: "Menlo", monospace;
-  font-size: 12pt;
-  border: 1px solid #2E5FA5;
-  color: #2E5FA5;
-  /* child layout */
-  padding: 4px 8px; }
-
-form table {
+form {
   width: 100%; }
-
-form textarea {
-  /* self layout */
-  height: 96px;
-  /* decoration */
-  font-family: "Menlo", monospace;
-  font-size: 12pt;
-  border: 1px solid #2E5FA5;
-  color: #2E5FA5;
-  /* child layout */
-  padding: 4px 8px; }
-
-form tr td {
-  /* self layout */
-  padding-bottom: 16px; }
-  form tr td label, form tr td input, form tr td textarea {
-    width: calc(100% - 16px); }
-  form tr td p.error {
-    /* self layout */
-    display: none;
+  form input {
     /* decoration */
-    color: #BB5151;
-    font-family: "Avenir", sans-serif;
-    font-size: 11pt;
-    font-weight: bold;
+    font-family: "Menlo", monospace;
+    font-size: 12pt;
+    border: 1px solid #2E5FA5;
+    color: #2E5FA5;
     /* child layout */
-    padding-top: 4px; }
-
-form tr:last-child td {
-  padding-bottom: 0; }
-
-form tr.buttons td {
-  padding-top: 16px;
-  text-align: right; }
-
-form tr.error input, form tr.error textarea {
-  color: #BB5151;
-  border-color: #BB5151; }
-
-form tr.error p.error {
-  display: block; }
-
-form tr.error td {
-  padding-top: 16px; }
-
-form tr.with-jump td {
-  padding-top: 48px; }
+    padding: 4px 8px; }
+  form table {
+    width: 100%; }
+    form table tr td {
+      /* self layout */
+      padding-bottom: 16px; }
+      form table tr td label, form table tr td input, form table tr td textarea {
+        width: calc(100% - 16px); }
+      form table tr td p.error {
+        /* self layout */
+        display: none;
+        /* decoration */
+        color: #BB5151;
+        font-family: "Avenir", sans-serif;
+        font-size: 11pt;
+        font-weight: bold;
+        /* child layout */
+        padding-top: 4px; }
+    form table tr:last-child td {
+      padding-bottom: 0; }
+    form table tr.buttons td {
+      padding-top: 16px;
+      text-align: right; }
+    form table tr.error input, form table tr.error textarea {
+      color: #BB5151;
+      border-color: #BB5151; }
+    form table tr.error p.error {
+      display: block; }
+    form table tr.error td {
+      padding-top: 16px; }
+    form table tr.with-jump td {
+      padding-top: 48px; }
+  form textarea {
+    /* self layout */
+    height: 96px;
+    /* decoration */
+    font-family: "Menlo", monospace;
+    font-size: 12pt;
+    border: 1px solid #2E5FA5;
+    color: #2E5FA5;
+    /* child layout */
+    padding: 4px 8px; }
 
 a {
   font-family: "Avenir", sans-serif;
@@ -225,6 +218,10 @@ button {
   padding: 4px 48px; }
   button:active {
     box-shadow: none; }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none; }
   button:hover {
     background: #eaeef2; }
   button.action {
@@ -252,6 +249,9 @@ button {
     border-width: 1px;
     /* child layout */
     padding: 2px 4px; }
+
+em {
+  font-style: italic; }
 
 h1 {
   font-family: "Hoefler Text", serif;
@@ -304,6 +304,17 @@ label {
   @media (max-width: 568px) {
     label {
       font-size: 13pt; } }
+ol {
+  /* self layout */
+  margin: 16px 0 48px 0;
+  /* decoration */
+  list-style-type: decimal;
+  list-style-position: outside; }
+  ol li {
+    margin-left: 16px; }
+    ol li + li {
+      margin-top: 4px; }
+
 p {
   line-height: 1.25em; }
   p + p {
@@ -314,6 +325,9 @@ pre {
   font-size: 12pt;
   overflow-x: auto; }
 
+strong {
+  font-weight: bold; }
+
 ul {
   /* self layout */
   margin: 16px 0 48px 0;
@@ -321,7 +335,7 @@ ul {
   list-style-type: disc;
   list-style-position: outside; }
   ul li {
-    margin-left: 48px; }
+    margin-left: 16px; }
     ul li + li {
       margin-top: 4px; }
   ul.simple {
