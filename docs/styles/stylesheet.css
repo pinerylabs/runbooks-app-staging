@@ -22,6 +22,9 @@ mark, audio, video, input {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
+input, textarea {
+  user-select: text; }
+
 ol, ul {
   list-style: none; }
 
@@ -245,7 +248,10 @@ button {
     border-radius: 12px;
     border-width: 1px;
     /* child layout */
-    padding: 2px 4px; }
+    padding: 2px 16px; }
+  button.subtle {
+    border: none;
+    box-shadow: none; }
 
 em {
   font-style: italic; }
