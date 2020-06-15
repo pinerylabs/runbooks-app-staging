@@ -300,6 +300,8 @@ input {
   input:focus {
     border-color: #2E5FA5;
     color: #2E5FA5; }
+  input::placeholder {
+    color: #79a1da; }
 
 label {
   font-family: "Hoefler Text", serif;
@@ -330,6 +332,9 @@ pre {
 
 strong {
   font-weight: bold; }
+
+textarea::placeholder {
+  color: #79a1da; }
 
 ul {
   /* self layout */
