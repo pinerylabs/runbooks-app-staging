@@ -119,7 +119,7 @@ form {
   form input {
     /* decoration */
     font-family: "Menlo", monospace;
-    font-size: 12pt;
+    font-size: 10pt;
     border: 1px solid #2E5FA5;
     color: #2E5FA5;
     /* child layout */
@@ -160,7 +160,7 @@ form {
     height: 96px;
     /* decoration */
     font-family: "Menlo", monospace;
-    font-size: 12pt;
+    font-size: 10pt;
     border: 1px solid #2E5FA5;
     color: #2E5FA5;
     /* child layout */
@@ -231,6 +231,9 @@ button {
     color: #FAFBFC; }
     button.action:hover {
       background: #285491; }
+    button.action.destructive {
+      background: #BB5151;
+      color: #FAFBFC; }
   button.destructive {
     border-color: #BB5151;
     color: #BB5151; }
@@ -280,7 +283,7 @@ i {
 input {
   /* decoration */
   font-family: "Menlo", monospace;
-  font-size: 12pt;
+  font-size: 10pt;
   background: #FFFFFF;
   border: 1px solid #DAE2ED;
   color: #122540;
@@ -327,7 +330,7 @@ p {
 
 pre {
   font-family: "Menlo", monospace;
-  font-size: 12pt;
+  font-size: 10pt;
   overflow-x: auto; }
 
 strong {
