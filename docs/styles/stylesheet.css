@@ -53,6 +53,12 @@ table {
 
 @font-face {
   font-family: "Hoefler Text";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/hoefler-text-black.woff") format("woff"); }
+
+@font-face {
+  font-family: "Hoefler Text";
   font-style: italic;
   font-weight: normal;
   src: url("/fonts/hoefler-text-italic.woff") format("woff"); }
@@ -69,9 +75,12 @@ table {
   /* child layout */
   display: flex;
   flex-flow: row;
+  align-items: baseline;
   justify-content: flex-end; }
-  .button-row button + button {
+  .button-row > * {
     margin-left: 16px; }
+    .button-row > *:first-child {
+      margin-left: 0; }
 
 .disabled {
   cursor: not-allowed;
