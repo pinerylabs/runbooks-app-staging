@@ -42,6 +42,11 @@ table {
 @font-face {
   font-family: "Avenir";
   font-style: normal;
+  src: url("/fonts/avenir.woff") format("woff"); }
+
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
   font-weight: bold;
   src: url("/fonts/avenir-bold.woff") format("woff"); }
 
@@ -68,6 +73,18 @@ table {
   font-style: normal;
   font-weight: normal;
   src: url("/fonts/menlo.woff") format("woff"); }
+
+.due-date.overdue {
+  color: #BB5151; }
+
+.due-date.due {
+  color: #2E5FA5; }
+
+.due-date.due-soon {
+  color: #79a1da; }
+
+.due-date.not-due {
+  color: #b5cbea; }
 
 .button-row {
   /* self layout */
@@ -185,17 +202,9 @@ a {
     color: #122540; }
 
 body {
-  /* self layout */
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   /* decoration */
   font-family: "Hoefler Text", serif;
-  font-size: 15pt;
-  background: #FAFBFC;
-  color: #122540; }
+  font-size: 15pt; }
   @media (max-width: 568px) {
     body {
       font-size: 13pt; } }
@@ -206,6 +215,7 @@ body {
       height: 100%;
       width: 100%; }
       body #app > * .c-generic-page {
+        /* self layout */
         height: 100%;
         width: 100%; }
 
@@ -286,6 +296,9 @@ h3 {
   @media (max-width: 568px) {
     h3 {
       font-size: 12pt; } }
+html, body {
+  height: 100%; }
+
 i {
   font-style: italic; }
 
@@ -296,6 +309,7 @@ input {
   background: #FFFFFF;
   border: 1px solid #DAE2ED;
   color: #122540;
+  outline: none;
   /* child layout */
   padding: 4px; }
   input.display-only {
