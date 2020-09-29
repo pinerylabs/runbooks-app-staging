@@ -2,8 +2,8 @@
 
 window.pinerylabs = {
     application: "runbooks.app",
-    deployed_on: "2020-09-07T19:12:25.881320Z",
+    deployed_on: "2020-09-29T14:07:06.543220Z",
     environment: "staging",
-    git_hash:    "26ec1ac",
-    version:     "0.9.0"
+    git_hash:    "85a92ee",
+    version:     "0.10.0"
 };
