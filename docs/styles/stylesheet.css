@@ -42,6 +42,7 @@ table {
 @font-face {
   font-family: "Avenir";
   font-style: normal;
+  font-weight: normal;
   src: url("/fonts/avenir.woff") format("woff"); }
 
 @font-face {
@@ -204,7 +205,8 @@ a {
 body {
   /* decoration */
   font-family: "Hoefler Text", serif;
-  font-size: 15pt; }
+  font-size: 15pt;
+  background: #FAFBFC; }
   @media (max-width: 568px) {
     body {
       font-size: 13pt; } }
@@ -259,6 +261,17 @@ button {
     button.destructive:hover {
       background: #BB5151;
       color: #FAFBFC; }
+  button.huge {
+    /* self layout */
+    height: 48px;
+    min-width: 192px;
+    /* decoration */
+    font-family: "Avenir", sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    border-radius: 24px;
+    /* child layout */
+    padding: 4px 48px; }
   button.little {
     /* self layout */
     height: 24px;
