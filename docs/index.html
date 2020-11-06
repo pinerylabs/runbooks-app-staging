@@ -2,12 +2,32 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJP9FCV0BR"></script>
   <script>window.dataLayer = window.dataLayer || [];
-function gtag() {
+window.gtag = function() {
     window.dataLayer.push(arguments);
-}
+};
 
-gtag("js", new Date());
-gtag("config", "G-GJP9FCV0BR")
+window.gtag("js", new Date());
+window.gtag("config", "G-GJP9FCV0BR", {
+    send_page_view: false,
+    transport_type: "beacon",
+});
+  </script>
+
+  <script type="text/javascript">var _smartsupp = _smartsupp || {};
+_smartsupp.key = "fa2ea676205b09d04b51ab2ee91153adcfa1b6e6";
+window.smartsupp || (function(d) {
+    var s, c, o = smartsupp = function() {
+        o._.push(arguments)
+    };
+    o._ = [];
+    s = d.getElementsByTagName("script")[0];
+    c = d.createElement("script");
+    c.type = "text/javascript";
+    c.charset = "utf-8";
+    c.async = true;
+    c.src = "https://www.smartsuppchat.com/loader.js?";
+    s.parentNode.insertBefore(c, s);
+})(document);
   </script>
 
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
