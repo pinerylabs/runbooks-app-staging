@@ -46,7 +46,7 @@ table {
   src: url("/fonts/avenir.woff") format("woff"); }
 
 @font-face {
-  font-family: "Avenir";
+  font-family: "Avenir Bold";
   font-style: normal;
   font-weight: bold;
   src: url("/fonts/avenir-bold.woff") format("woff"); }
@@ -58,13 +58,13 @@ table {
   src: url("/fonts/hoefler-text.woff") format("woff"); }
 
 @font-face {
-  font-family: "Hoefler Text";
+  font-family: "Hoefler Text Black";
   font-style: normal;
   font-weight: bold;
   src: url("/fonts/hoefler-text-black.woff") format("woff"); }
 
 @font-face {
-  font-family: "Hoefler Text";
+  font-family: "Hoefler Text Italic";
   font-style: italic;
   font-weight: normal;
   src: url("/fonts/hoefler-text-italic.woff") format("woff"); }
@@ -76,7 +76,7 @@ table {
   src: url("/fonts/menlo.woff") format("woff"); }
 
 .due-date.overdue {
-  color: #BB5151; }
+  color: #bf1414; }
 
 .due-date.due {
   color: #2E5FA5; }
@@ -125,10 +125,10 @@ table {
   margin-top: 16px; }
 
 .missing-component {
-  background: #FAFBFC;
-  border: 1px dashed #BB5151;
+  background: #fbfcfd;
+  border: 1px dashed #bf1414;
   font-family: monospace;
-  color: #DAE2ED;
+  color: #cbd7e9;
   text-align: center;
   padding: 48px; }
 
@@ -136,7 +136,7 @@ table {
   font-family: "Avenir", sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  color: #DAE2ED; }
+  color: #cbd7e9; }
 
 .scroll-buffer {
   height: 48px; }
@@ -162,7 +162,7 @@ form {
         /* self layout */
         display: none;
         /* decoration */
-        color: #BB5151;
+        color: #bf1414;
         font-family: "Avenir", sans-serif;
         font-size: 11pt;
         font-weight: bold;
@@ -174,8 +174,8 @@ form {
       padding-top: 16px;
       text-align: right; }
     form table tr.error input, form table tr.error textarea {
-      color: #BB5151;
-      border-color: #BB5151; }
+      color: #bf1414;
+      border-color: #bf1414; }
     form table tr.error p.error {
       display: block; }
     form table tr.error td {
@@ -200,93 +200,7 @@ a {
   color: #2E5FA5;
   cursor: pointer; }
   a:active {
-    color: #122540; }
-
-body {
-  /* decoration */
-  font-family: "Hoefler Text", serif;
-  font-size: 15pt;
-  background: #FAFBFC; }
-  @media (max-width: 568px) {
-    body {
-      font-size: 13pt; } }
-  body #app {
-    height: 100%;
-    width: 100%; }
-    body #app > * {
-      height: 100%;
-      width: 100%; }
-      body #app > * .c-generic-page {
-        /* self layout */
-        height: 100%;
-        width: 100%; }
-
-button {
-  /* self layout */
-  height: 32px;
-  min-width: 96px;
-  /* self decoration */
-  font-family: "Avenir", sans-serif;
-  font-size: 12pt;
-  font-weight: bold;
-  background: #FAFBFC;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.125);
-  border-radius: 16px;
-  border: 2px solid #2E5FA5;
-  color: #2E5FA5;
-  cursor: pointer;
-  /* child layout */
-  padding: 4px 48px; }
-  button:active {
-    box-shadow: none; }
-  button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none; }
-  button:hover {
-    background: #eaeef2; }
-  button.action {
-    background: #2E5FA5;
-    border-width: 0;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-    color: #FAFBFC; }
-    button.action:hover {
-      background: #285491; }
-    button.action.destructive {
-      background: #BB5151;
-      color: #FAFBFC; }
-  button.destructive {
-    border-color: #BB5151;
-    color: #BB5151; }
-    button.destructive:hover {
-      background: #BB5151;
-      color: #FAFBFC; }
-  button.huge {
-    /* self layout */
-    height: 48px;
-    min-width: 192px;
-    /* decoration */
-    font-family: "Avenir", sans-serif;
-    font-size: 16pt;
-    font-weight: bold;
-    border-radius: 24px;
-    /* child layout */
-    padding: 4px 48px; }
-  button.little {
-    /* self layout */
-    height: 24px;
-    min-width: 96px;
-    /* decoration */
-    font-family: "Avenir", sans-serif;
-    font-size: 10pt;
-    font-weight: bold;
-    border-radius: 12px;
-    border-width: 1px;
-    /* child layout */
-    padding: 2px 16px; }
-  button.subtle {
-    border: none;
-    box-shadow: none; }
+    color: #122642; }
 
 em {
   font-style: italic; }
@@ -309,8 +223,45 @@ h3 {
   @media (max-width: 568px) {
     h3 {
       font-size: 12pt; } }
-html, body {
-  height: 100%; }
+html {
+  /* self layout */
+  min-height: 100%;
+  /* child layout */
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: stretch; }
+  html body {
+    /* self layout */
+    flex: 1 1 100%;
+    /* decoration */
+    font-family: "Hoefler Text", serif;
+    font-size: 15pt;
+    background: #fbfcfd;
+    /* self layout */
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: stretch; }
+    @media (max-width: 568px) {
+      html body {
+        font-size: 13pt; } }
+    html body #app {
+      /* self layout */
+      flex: 1 1 100%;
+      /* child layout */
+      display: flex;
+      flex-flow: column;
+      align-items: stretch;
+      justify-content: stretch; }
+      html body #app > * {
+        /* self layout */
+        flex: 1 1 100%;
+        /* child layout */
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+        justify-content: stretch; }
 
 i {
   font-style: italic; }
@@ -319,9 +270,9 @@ input {
   /* decoration */
   font-family: "Menlo", monospace;
   font-size: 10pt;
-  background: #FFFFFF;
-  border: 1px solid #DAE2ED;
-  color: #122540;
+  background: #fcfcfc;
+  border: 1px solid #cbd7e9;
+  color: #122642;
   outline: none;
   /* child layout */
   padding: 4px; }
@@ -335,7 +286,7 @@ input {
     input.display-only:focus {
       background-color: rgba(0, 0, 0, 0);
       border-color: rgba(0, 0, 0, 0);
-      color: #122540; }
+      color: #122642; }
   input:focus {
     border-color: #2E5FA5;
     color: #2E5FA5; }
@@ -389,3 +340,6 @@ ul {
     list-style-type: none; }
     ul.simple li {
       margin-left: 0; }
+
+#chat-application {
+  bottom: 16px !important; }
