@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJP9FCV0BR"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJP9FCV0BR,UA-181883027-2"></script>
   <script>window.dataLayer = window.dataLayer || [];
 window.gtag = function() {
     window.dataLayer.push(arguments);
 };
-
-window.gtag("js", new Date());
-window.gtag("config", "G-GJP9FCV0BR", {
-    send_page_view: false,
-    transport_type: "beacon",
-});
+  </script>
+  <script>window.gtag("js", new Date());
+for (let analyticsId of "G-GJP9FCV0BR,UA-181883027-2".split(",")) {
+    window.gtag("config", analyticsId, {
+        send_page_view: false,
+        transport_type: "beacon",
+    });
+}
   </script>
 
   <script type="text/javascript">var _smartsupp = _smartsupp || {};
