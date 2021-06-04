@@ -223,7 +223,7 @@ h3 {
   font-size: 18pt; }
   @media (max-width: 800px) {
     h3 {
-      font-size: 12pt; } }
+      font-size: 16pt; } }
 html {
   /* self layout */
   min-width: 320px;
@@ -314,8 +314,6 @@ ol {
 
 p {
   line-height: 1.25em; }
-  p + p {
-    margin-top: 48px; }
 
 pre {
   font-family: "Menlo", monospace;
