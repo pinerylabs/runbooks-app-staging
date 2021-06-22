@@ -115,9 +115,7 @@ table {
 .h2 {
   font-family: "Hoefler Text", serif;
   font-size: 24pt; }
-  @media (max-width: 800px) {
-    .h2 {
-      font-size: 16pt; } }
+
 .label-row label {
   display: inline-block;
   min-width: 96px; }
@@ -209,24 +207,18 @@ em {
 h1 {
   font-family: "Hoefler Text", serif;
   font-size: 32pt; }
-  @media (max-width: 800px) {
-    h1 {
-      font-size: 24pt; } }
+
 h2 {
   font-family: "Hoefler Text", serif;
   font-size: 24pt; }
-  @media (max-width: 800px) {
-    h2 {
-      font-size: 16pt; } }
+
 h3 {
   font-family: "Hoefler Text", serif;
   font-size: 18pt; }
-  @media (max-width: 800px) {
-    h3 {
-      font-size: 16pt; } }
+
 html {
   /* self layout */
-  min-width: 320px;
+  min-width: 414px;
   min-height: 100%;
   /* child layout */
   display: flex;
@@ -245,9 +237,6 @@ html {
     flex-flow: column;
     align-items: stretch;
     justify-content: stretch; }
-    @media (max-width: 800px) {
-      html body {
-        font-size: 13pt; } }
     html body #app {
       /* self layout */
       flex: 1 1 100%;
@@ -298,9 +287,7 @@ input {
 label {
   font-family: "Hoefler Text", serif;
   font-size: 15pt; }
-  @media (max-width: 800px) {
-    label {
-      font-size: 13pt; } }
+
 ol {
   /* self layout */
   margin: 16px 0 48px 0;
