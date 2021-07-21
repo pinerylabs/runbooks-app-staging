@@ -1,7 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/*
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl,
 dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
@@ -41,40 +42,28 @@ table {
   border-spacing: 0; }
 
 @font-face {
-  font-family: "Avenir";
+  font-family: "Fira Code";
   font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/avenir.woff") format("woff"); }
+  font-weight: 300 700;
+  src: url("/fonts/fira-code.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Avenir Bold";
+  font-family: "Roboto Slab";
   font-style: normal;
-  font-weight: bold;
-  src: url("/fonts/avenir-bold.woff") format("woff"); }
+  font-weight: 100 900;
+  src: url("/fonts/roboto-slab.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Hoefler Text";
+  font-family: "Rubik";
   font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/hoefler-text.woff") format("woff"); }
+  font-weight: 300 900;
+  src: url("/fonts/rubik.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Hoefler Text Black";
-  font-style: normal;
-  font-weight: bold;
-  src: url("/fonts/hoefler-text-black.woff") format("woff"); }
-
-@font-face {
-  font-family: "Hoefler Text Italic";
+  font-family: "Rubik";
   font-style: italic;
-  font-weight: normal;
-  src: url("/fonts/hoefler-text-italic.woff") format("woff"); }
-
-@font-face {
-  font-family: "Menlo";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/fonts/menlo.woff") format("woff"); }
+  font-weight: 300 900;
+  src: url("/fonts/rubik-italic.ttf") format("truetype"); }
 
 .due-date.overdue {
   color: #bf1414; }
@@ -113,8 +102,10 @@ table {
     pointer-events: none; }
 
 .h2 {
-  font-family: "Hoefler Text", serif;
-  font-size: 24pt; }
+  font-family: "Roboto Slab", serif;
+  font-size: 23.4375px;
+  font-weight: 500;
+  color: #091321; }
 
 .label-row label {
   display: inline-block;
@@ -132,9 +123,10 @@ table {
   padding: 48px; }
 
 .placeholder {
-  font-family: "Avenir", sans-serif;
-  font-size: 18pt;
-  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  font-size: 23.4375px;
+  font-weight: 500;
+  color: #cbd7e9;
   color: #cbd7e9; }
 
 .scroll-buffer {
@@ -144,8 +136,10 @@ form {
   width: 100%; }
   form input {
     /* decoration */
-    font-family: "Menlo", monospace;
-    font-size: 10pt;
+    font-family: "Fira Code", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    color: #091321;
     border: 1px solid #2E5FA5;
     color: #2E5FA5;
     /* child layout */
@@ -161,10 +155,12 @@ form {
         /* self layout */
         display: none;
         /* decoration */
+        font-family: "Rubik", sans-serif;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 400;
+        color: #b1b2b4;
         color: #bf1414;
-        font-family: "Avenir", sans-serif;
-        font-size: 11pt;
-        font-weight: bold;
         /* child layout */
         padding-top: 4px; }
     form table tr:last-child td {
@@ -185,36 +181,50 @@ form {
     /* self layout */
     height: 96px;
     /* decoration */
-    font-family: "Menlo", monospace;
-    font-size: 10pt;
+    font-family: "Fira Code", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    color: #091321;
     border: 1px solid #2E5FA5;
     color: #2E5FA5;
     /* child layout */
     padding: 4px 8px; }
 
 a {
-  font-family: "Avenir", sans-serif;
-  font-size: 12pt;
-  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-size: 18.75px;
+  font-weight: 400;
   color: #2E5FA5;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 100ms; }
   a:active {
-    color: #122642; }
+    color: #6593d4; }
+  a:hover {
+    color: #3d77c9; }
+  a:visited {
+    color: #23487d; }
 
 em {
   font-style: italic; }
 
 h1 {
-  font-family: "Hoefler Text", serif;
-  font-size: 32pt; }
+  font-family: "Roboto Slab", serif;
+  font-size: 29.29688px;
+  font-weight: 500;
+  color: #091321; }
 
 h2 {
-  font-family: "Hoefler Text", serif;
-  font-size: 24pt; }
+  font-family: "Roboto Slab", serif;
+  font-size: 23.4375px;
+  font-weight: 500;
+  color: #091321; }
 
 h3 {
-  font-family: "Hoefler Text", serif;
-  font-size: 18pt; }
+  font-family: "Roboto Slab", serif;
+  font-size: 18.75px;
+  font-weight: 500;
+  color: #091321; }
 
 html {
   /* self layout */
@@ -229,8 +239,10 @@ html {
     /* self layout */
     flex: 1 1 100%;
     /* decoration */
-    font-family: "Hoefler Text", serif;
-    font-size: 15pt;
+    font-family: "Rubik", sans-serif;
+    font-size: 18.75px;
+    font-weight: 400;
+    color: #091321;
     background: #fbfcfd;
     /* self layout */
     display: flex;
@@ -259,8 +271,10 @@ i {
 
 input {
   /* decoration */
-  font-family: "Menlo", monospace;
-  font-size: 10pt;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  font-weight: 400;
+  color: #091321;
   background: #fcfcfc;
   border: 1px solid #cbd7e9;
   color: #122642;
@@ -285,8 +299,10 @@ input {
     color: #79a1da; }
 
 label {
-  font-family: "Hoefler Text", serif;
-  font-size: 15pt; }
+  font-family: "Rubik", sans-serif;
+  font-size: 18.75px;
+  font-weight: 400;
+  color: #091321; }
 
 ol {
   /* self layout */
@@ -300,18 +316,62 @@ ol {
       margin-top: 4px; }
 
 p {
-  line-height: 1.25em; }
+  font-family: "Rubik", sans-serif;
+  font-size: 18.75px;
+  font-weight: 400;
+  color: #091321; }
 
 pre {
-  font-family: "Menlo", monospace;
-  font-size: 10pt;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  font-weight: 400;
+  color: #091321;
   overflow-x: auto; }
 
 strong {
-  font-weight: bold; }
+  font-weight: 500; }
+
+table tr th {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #091321; }
+  table tr th a {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #091321;
+    color: #122642;
+    text-decoration: none; }
+    table tr th a:hover {
+      color: #2E5FA5;
+      text-decoration: underline; }
+
+table tr td {
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #091321; }
+  table tr td a {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #091321;
+    color: #122642;
+    text-decoration: none; }
+    table tr td a:hover {
+      color: #2E5FA5;
+      text-decoration: underline; }
 
 textarea::placeholder {
   color: #79a1da; }
+
+tt {
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  font-weight: 400;
+  color: #091321;
+  white-space: nowrap; }
 
 ul {
   /* self layout */
