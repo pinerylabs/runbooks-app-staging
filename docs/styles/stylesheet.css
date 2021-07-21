@@ -65,18 +65,6 @@ table {
   font-weight: 300 900;
   src: url("/fonts/rubik-italic.ttf") format("truetype"); }
 
-.due-date.overdue {
-  color: #bf1414; }
-
-.due-date.due {
-  color: #2E5FA5; }
-
-.due-date.due-soon {
-  color: #79a1da; }
-
-.due-date.not-due {
-  color: #b5cbea; }
-
 .button-row {
   /* self layout */
   margin-top: 32px;
