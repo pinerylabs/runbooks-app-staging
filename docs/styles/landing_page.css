@@ -386,6 +386,33 @@
           white-space: nowrap; }
       .c-landing-page #explanation .section-content .last-step p + p {
         margin-top: 16px; }
+  .c-landing-page #blog .section-content {
+    /* self layout */
+    max-width: 50%;
+    /* mobile */ }
+    @media (max-width: 800px) {
+      .c-landing-page #blog .section-content {
+        max-width: 100%; } }
+    .c-landing-page #blog .section-content .blog-entry {
+      /* self layout */
+      margin-top: 48px;
+      padding: 0 48px;
+      /* child layout */
+      display: flex;
+      flex-flow: column; }
+      .c-landing-page #blog .section-content .blog-entry p.sample {
+        /* self layout */
+        margin-top: 16px;
+        /* decoration */
+        font-family: "Rubik", sans-serif;
+        font-size: 12pt;
+        font-weight: normal; }
+      .c-landing-page #blog .section-content .blog-entry a.read-more {
+        margin-top: 16px;
+        font-family: "Rubik", sans-serif;
+        font-size: 12pt;
+        font-weight: normal;
+        text-align: right; }
   .c-landing-page #pricing {
     /* self layout */
     margin-top: 96px;
@@ -411,7 +438,7 @@
         justify-content: space-around; }
         @media (max-width: 800px) {
           .c-landing-page #pricing .section-content .pricing-row {
-            max-width: 75%;
+            max-width: 95%;
             flex-flow: column; } }
         .c-landing-page #pricing .section-content .pricing-row .price-block {
           /* self layout */
@@ -494,7 +521,7 @@
       /* mobile */ }
       @media (max-width: 800px) {
         .c-landing-page #pricing #early-access {
-          max-width: 75%;
+          max-width: 95%;
           flex-flow: column; } }
       .c-landing-page #pricing #early-access .divider-title {
         /* self layout */
@@ -553,6 +580,15 @@
           font-size: 15px;
           font-weight: 400;
           color: #7d7f82; }
+        .c-landing-page #pricing #early-access .price-block .price {
+          /* self layout */
+          margin-top: 48px;
+          text-align: center;
+          /* decoration */
+          font-family: "Roboto Slab", serif;
+          font-size: 18.75px;
+          font-weight: 500;
+          color: #2E5FA5; }
     .c-landing-page #pricing .c-button {
       margin-top: 48px;
       margin-bottom: 96px; }
@@ -605,6 +641,7 @@
           margin-bottom: 4px; }
         .c-landing-page #footer .section-content .copyright-row p {
           /* decoration */
+          color: #cbd7e9;
           font-family: "Rubik", sans-serif;
           font-size: 10pt;
           font-weight: normal; }
